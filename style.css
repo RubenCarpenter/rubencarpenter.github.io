@@ -3,7 +3,6 @@
   --text: #2f2f2f;
   --muted: #555;
   --link: #0072bc;
-  --accent: #007fae;
   --line: #d8cfbd;
   --abstract-bg: #eeeae2;
 }
@@ -63,7 +62,7 @@ h1 {
 
 h2 {
   margin-top: 50px;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--line);
   font-size: 31px;
@@ -79,42 +78,37 @@ a:hover {
   text-decoration: underline;
 }
 
-.year-block {
-  margin-top: 32px;
-  margin-bottom: 48px;
-  padding-left: 25px;
-  border-left: 7px solid var(--accent);
-}
-
-.year {
-  margin-bottom: 32px;
-  font-size: 38px;
-  line-height: 1;
-  font-weight: 800;
-  color: #3b3b3b;
-}
-
 .paper {
-  margin-bottom: 38px;
+  margin-bottom: 44px;
 }
 
 .paper h3 {
   margin: 0;
   font-size: 25px;
-  line-height: 1.3;
+  line-height: 1.32;
   font-weight: 800;
 }
 
-.authors {
-  margin: 3px 0 0;
+.coauthors {
+  font-weight: 400;
 }
 
-.status {
-  margin: 3px 0 8px;
+.paper-meta {
+  margin: 2px 0 0;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.paper-venue {
+  margin: 2px 0 8px;
+  color: var(--muted);
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.35;
 }
 
 details {
-  margin-top: 9px;
+  margin-top: 6px;
 }
 
 summary {
@@ -135,7 +129,7 @@ details[open] summary {
 details p {
   max-width: 920px;
   margin: 8px 0 0;
-  padding: 16px 20px;
+  padding: 14px 18px;
   background: var(--abstract-bg);
   border-left: 4px solid var(--line);
   font-size: 17px;
@@ -174,15 +168,19 @@ details p {
     height: 155px;
   }
 
+  .paper {
+    margin-bottom: 36px;
+  }
+
   .paper h3 {
     font-size: 21px;
   }
 
-  .year {
-    font-size: 32px;
+  .paper-meta {
+    font-size: 18px;
   }
 
-  .year-block {
-    padding-left: 18px;
+  .paper-venue {
+    font-size: 16px;
   }
 }
