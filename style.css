@@ -1,10 +1,12 @@
 :root {
   --background: #f7f4ed;
+  --card: #fffdf8;
   --text: #2f2f2f;
-  --muted: #555;
+  --muted: #666;
   --link: #0072bc;
   --line: #d8cfbd;
-  --abstract-bg: #eeeae2;
+  --abstract-bg: #f1ede4;
+  --shadow: rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -16,7 +18,7 @@ body {
   background: var(--background);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.55;
 }
 
@@ -40,7 +42,7 @@ body {
 
 h1 {
   margin: 0 0 8px;
-  font-size: 46px;
+  font-size: 44px;
   line-height: 1.1;
   font-weight: 800;
 }
@@ -48,7 +50,7 @@ h1 {
 .subtitle {
   margin-top: 0;
   color: var(--muted);
-  font-size: 22px;
+  font-size: 21px;
 }
 
 .profile {
@@ -65,8 +67,9 @@ h2 {
   margin-bottom: 24px;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--line);
-  font-size: 31px;
+  font-size: 34px;
   line-height: 1.2;
+  font-weight: 800;
 }
 
 a {
@@ -78,14 +81,32 @@ a:hover {
   text-decoration: underline;
 }
 
-.paper {
-  margin-bottom: 44px;
+/* Small year dividers */
+
+.year-heading {
+  margin: 32px 0 14px;
+  color: var(--muted);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
 }
 
-.paper h3 {
+/* Paper / item cards */
+
+.paper {
+  margin-bottom: 22px;
+  padding: 22px 26px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 4px 14px var(--shadow);
+}
+
+.paper h3,
+.paper h4 {
   margin: 0;
-  font-size: 25px;
-  line-height: 1.32;
+  font-size: 22px;
+  line-height: 1.3;
   font-weight: 800;
 }
 
@@ -94,18 +115,26 @@ a:hover {
 }
 
 .paper-meta {
-  margin: 2px 0 0;
-  font-size: 21px;
-  line-height: 1.35;
+  margin: 5px 0 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.paper-links {
+  margin: 1px 0 6px;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .paper-venue {
-  margin: 2px 0 8px;
+  margin: 2px 0 6px;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 16px;
   font-style: italic;
-  line-height: 1.35;
+  line-height: 1.4;
 }
+
+/* Collapsible abstracts */
 
 details {
   margin-top: 6px;
@@ -115,6 +144,7 @@ summary {
   display: inline-block;
   cursor: pointer;
   color: var(--link);
+  font-size: 17px;
   font-weight: 700;
 }
 
@@ -127,14 +157,22 @@ details[open] summary {
 }
 
 details p {
-  max-width: 920px;
   margin: 8px 0 0;
   padding: 14px 18px;
   background: var(--abstract-bg);
   border-left: 4px solid var(--line);
-  font-size: 17px;
+  border-radius: 10px;
+  font-size: 16.5px;
   line-height: 1.55;
 }
+
+/* Non-card body text */
+
+section > p {
+  max-width: 900px;
+}
+
+/* Mobile */
 
 @media (max-width: 720px) {
   body {
@@ -160,7 +198,7 @@ details p {
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .profile {
@@ -168,19 +206,34 @@ details p {
     height: 155px;
   }
 
-  .paper {
-    margin-bottom: 36px;
-  }
-
-  .paper h3 {
-    font-size: 21px;
-  }
-
-  .paper-meta {
+  .year-heading {
     font-size: 18px;
   }
 
+  .paper {
+    padding: 18px 20px;
+    border-radius: 15px;
+  }
+
+  .paper h3,
+  .paper h4 {
+    font-size: 20px;
+  }
+
+  .paper-meta,
+  .paper-links {
+    font-size: 17px;
+  }
+
   .paper-venue {
-    font-size: 16px;
+    font-size: 15.5px;
+  }
+
+  summary {
+    font-size: 16.5px;
+  }
+
+  details p {
+    font-size: 15.5px;
   }
 }
