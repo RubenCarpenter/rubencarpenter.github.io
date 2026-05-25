@@ -94,24 +94,34 @@ a:hover {
 /* Paper / item cards */
 
 .paper {
-  margin-bottom: 22px;
-  padding: 22px 26px;
-  background: var(--card);
+  position: relative;
+  margin-bottom: 28px;
+  padding: 20px 24px 20px 28px;
+  background: #fffdf8;
   border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: 0 4px 14px var(--shadow);
+  border-left: 6px solid #007fae;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
 }
 
-.paper h3,
-.paper h4 {
+.paper-year {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 2px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: #f4efe4;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.paper h3 {
   margin: 0;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.3;
   font-weight: 800;
-}
-
-.coauthors {
-  font-weight: 400;
 }
 
 .paper-meta {
@@ -121,23 +131,13 @@ a:hover {
 }
 
 .paper-links {
-  margin: 1px 0 6px;
+  margin: 3px 0 0;
   font-size: 18px;
   line-height: 1.4;
 }
 
-.paper-venue {
-  margin: 2px 0 6px;
-  color: var(--muted);
-  font-size: 16px;
-  font-style: italic;
-  line-height: 1.4;
-}
-
-/* Collapsible abstracts */
-
 details {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 summary {
@@ -159,13 +159,12 @@ details[open] summary {
 details p {
   margin: 8px 0 0;
   padding: 14px 18px;
-  background: var(--abstract-bg);
+  background: #f1ede4;
   border-left: 4px solid var(--line);
   border-radius: 10px;
-  font-size: 16.5px;
+  font-size: 16px;
   line-height: 1.55;
 }
-
 /* Non-card body text */
 
 section > p {
